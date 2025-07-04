@@ -1,5 +1,3 @@
-// components/Quote.js
-
 export const quotes = {
   success: [
     "Success is not the key to happiness. Happiness is the key to success.",
