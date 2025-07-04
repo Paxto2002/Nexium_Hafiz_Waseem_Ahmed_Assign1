@@ -101,12 +101,12 @@ export default function QuoteGenerator() {
           matchedQuotes.map((quote, index) => (
             <Card
               key={index}
-              className="bg-gradient-to-r from-pink-200 via-yellow-100 to-purple-200 p-[2px] rounded-2xl shadow-lg hover:scale-[1.02] hover:shadow-xl transition-all duration-300 ease-in-out"
+              className="bg-gradient-to-b from-gray-950 via-gray-900 to-black p-[2px] rounded-xl hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:scale-[1.01] transition-all duration-300"
             >
-              <CardContent className="bg-white rounded-2xl p-6 text-center text-gray-700 font-medium italic leading-relaxed">
-                <span className="block text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-fuchsia-500">
+              <CardContent className="bg-gray-950 rounded-xl p-6 text-center">
+                <p className="text-lg md:text-xl font-semibold leading-relaxed bg-gradient-to-r from-white via-slate-100 to-zinc-300 text-transparent bg-clip-text italic">
                   “{quote}”
-                </span>
+                </p>
               </CardContent>
             </Card>
           ))
