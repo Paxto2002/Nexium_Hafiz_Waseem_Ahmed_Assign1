@@ -45,7 +45,7 @@ export default function QuoteGenerator() {
 
   return (
     <div className="w-full max-w-xl mx-auto p-4 space-y-6 overflow-x-hidden">
-      <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500">
+      <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 text-center">
         ✨ Quote Genie: Rub the Lamp, Get Inspired!
       </h1>
       <p className="text-center text-gray-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto break-words">
