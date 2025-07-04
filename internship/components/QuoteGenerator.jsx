@@ -99,8 +99,15 @@ export default function QuoteGenerator() {
       <div className="mt-6 space-y-4">
         {matchedQuotes.length > 0 ? (
           matchedQuotes.map((quote, index) => (
-            <Card key={index} className="bg-gray-50 shadow-sm text-center">
-              {quote}
+            <Card
+              key={index}
+              className="bg-gradient-to-r from-pink-200 via-yellow-100 to-purple-200 p-[2px] rounded-2xl shadow-lg hover:scale-[1.02] hover:shadow-xl transition-all duration-300 ease-in-out"
+            >
+              <CardContent className="bg-white rounded-2xl p-6 text-center text-gray-700 font-medium italic leading-relaxed">
+                <span className="block text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-fuchsia-500">
+                  “{quote}”
+                </span>
+              </CardContent>
             </Card>
           ))
         ) : hasSearched ? (
