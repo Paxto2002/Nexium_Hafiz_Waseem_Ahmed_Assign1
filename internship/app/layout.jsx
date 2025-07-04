@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Genie Quotes",
+  title: "Quote Genie",
   description:
-    "Unleash daily motivation with Genie Quotes — a magical quote generator that serves up wisdom based on your chosen theme. Built with Next.js, Tailwind CSS, and ShadCN UI.",
+    "Unleash daily motivation with Quote Genie — a magical quote generator that serves up wisdom based on your chosen theme. Built with Next.js, Tailwind CSS, and ShadCN UI.",
 };
 
 export default function RootLayout({ children }) {
