@@ -64,7 +64,7 @@ export default function AboutPage() {
             <ul className="list-disc pl-4 space-y-1 text-sm text-gray-300">
               <li>Next.js 15</li>
               <li>React 19 with React Hook Form</li>
-              <li>Zod & @hookform/resolvers for schema validation</li>
+              <li>Zod & react-hook-form/resolvers for schema validation</li>
               <li>Tailwind CSS for utility-first styling</li>
               <li>ShadCN UI components</li>
             </ul>
