@@ -28,7 +28,7 @@ const formSchema = z.object({
 export default function QuoteGenerator() {
   const [matchedQuotes, setMatchedQuotes] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
-
+  const [searchedTopic, setSearchedTopic] = useState("");
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,6 +41,8 @@ export default function QuoteGenerator() {
     const foundQuotes = quotes[topic] || [];
     setMatchedQuotes(foundQuotes.slice(0, 3)); // Limit to 3 quotes
     setHasSearched(true); // Mark that user has searched
+    form.reset(); // Reset form after submission
+    setSearchedTopic(topic);
   };
 
   return (
@@ -97,14 +99,21 @@ export default function QuoteGenerator() {
 
       {/* Display Quotes */}
       <div aria-live="polite" className="mt-6 space-y-4">
+        {searchedTopic && matchedQuotes.length > 0 && (
+          <h2 className="text-center text-xl font-semibold text-gray-200 mt-15 mb-5">
+            🔮 Quotes about{" "}
+            <span className="capitalize text-yellow-400">{searchedTopic}</span>
+          </h2>
+        )}
+
         {matchedQuotes.length > 0 ? (
           matchedQuotes.map((quote, index) => (
             <Card
               key={index}
-              className="bg-gradient-to-b from-gray-950 via-gray-900 to-black p-[2px] rounded-xl hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:scale-[1.01] transition-all duration-300"
+              className="rounded-2xl p-[1.5px] bg-gradient-to-r from-purple-700 via-indigo-800 to-gray-900 shadow-[0_8px_30px_rgba(93,62,188,0.25)] hover:shadow-[0_12px_40px_rgba(129,94,255,0.4)] hover:scale-[1.015] transition-all duration-300"
             >
-              <CardContent className="bg-gray-950 rounded-xl p-6 text-center">
-                <p className="text-lg md:text-xl font-semibold leading-relaxed bg-gradient-to-r from-white via-slate-100 to-zinc-300 text-transparent bg-clip-text italic">
+              <CardContent className="bg-zinc-950/90 backdrop-blur-md rounded-2xl p-6 text-center border border-zinc-800">
+                <p className="text-xl md:text-2xl font-medium leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-blue-200 to-violet-100 italic drop-shadow-sm tracking-wide transition-all duration-300">
                   “{quote}”
                 </p>
               </CardContent>
