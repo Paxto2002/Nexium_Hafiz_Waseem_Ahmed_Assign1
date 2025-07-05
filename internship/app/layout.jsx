@@ -1,33 +1,34 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.jsx
 import "./globals.css";
+import { Poppins } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
   title: "Quote Genie",
-  description:
-    "Unleash daily motivation with Quote Genie — a magical quote generator that serves up wisdom based on your chosen theme. Built with Next.js, Tailwind CSS, and ShadCN UI.",
+  description: "Get inspiring quotes based on your mood or topic.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white`}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
+      <body className={`${poppins.className} antialiased min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white`}>
+
+        <div className="min-h-screen flex flex-col justify-between">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

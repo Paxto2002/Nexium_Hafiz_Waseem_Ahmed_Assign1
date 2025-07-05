@@ -6,7 +6,7 @@ export default function Footer() {
           © {new Date().getFullYear()} PaxtoQuotes. Built with 💡, ☕, and 💻.
         </p>
         <p className="text-xs text-gray-300">
-          Made with <span className="text-pink-400">Next.js</span> + <span className="text-sky-300">ShadCN UI</span>
+          My First <span className="text-pink-400">Next.js</span> + <span className="text-sky-300">ShadCN</span> Project
         </p>
       </div>
     </footer>

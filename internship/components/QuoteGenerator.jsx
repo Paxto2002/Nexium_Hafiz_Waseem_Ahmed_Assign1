@@ -96,7 +96,7 @@ export default function QuoteGenerator() {
       </Form>
 
       {/* Display Quotes */}
-      <div className="mt-6 space-y-4">
+      <div aria-live="polite" className="mt-6 space-y-4">
         {matchedQuotes.length > 0 ? (
           matchedQuotes.map((quote, index) => (
             <Card
