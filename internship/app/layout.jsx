@@ -18,12 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Essential Metadata */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="msapplication-TileColor" content="#2d89ef" />
-        <meta name="theme-color" content="#0f172a" /> {/* dark background */}
-        {/* Favicons */}
+        <meta name="theme-color" content="#0f172a" />
+
         <link
           rel="apple-touch-icon"
           sizes="180x180"
