@@ -18,15 +18,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* Essential Metadata */}
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${poppins.className} antialiased min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white`}>
-
+      <body
+        className={`${poppins.className} antialiased min-h-screen text-white bg-gradient-to-b from-gray-950 via-gray-900 to-black`}
+      >
         <div className="min-h-screen flex flex-col justify-between">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main role="main" className="flex-grow">{children}</main>
           <Footer />
         </div>
       </body>

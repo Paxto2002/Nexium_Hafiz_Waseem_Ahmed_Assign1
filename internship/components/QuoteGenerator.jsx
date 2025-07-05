@@ -83,15 +83,15 @@ export default function QuoteGenerator() {
             name="topic"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Enter a Topic</FormLabel>
+                <FormLabel htmlFor="topic">Enter a Topic</FormLabel>
                 <FormControl>
                   <Input
+                    id="topic"
                     className="input-highlight"
                     placeholder="e.g., success, courage, mindset"
                     {...field}
                   />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />

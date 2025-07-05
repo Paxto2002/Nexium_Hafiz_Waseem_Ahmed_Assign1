@@ -1,12 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-6">
+    <footer
+      role="contentinfo"
+      aria-label="Site Footer"
+      className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-6"
+    >
       <div className="container mx-auto text-center space-y-2 px-4">
         <p className="text-sm opacity-80">
-          © {new Date().getFullYear()} PaxtoQuotes. Built with 💡, ☕, and 💻.
+          © {new Date().getFullYear()} <span className="font-semibold">PaxtoQuotes</span>. Built with 💡, ☕, and 💻.
         </p>
         <p className="text-xs text-gray-300">
-          My First <span className="text-pink-400">Next.js</span> + <span className="text-sky-300">ShadCN</span> Project
+          My First <span className="text-pink-400 font-medium">Next.js</span> +{" "}
+          <span className="text-sky-300 font-medium">ShadCN</span> Project
         </p>
       </div>
     </footer>
