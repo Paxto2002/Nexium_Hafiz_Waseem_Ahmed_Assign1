@@ -3,8 +3,8 @@ export default function AboutPage() {
     <main className="flex items-center justify-center py-14 max-w-[80%] min-h-screen mx-auto">
       <section className="max-w-4xl mx-auto text-center space-y-8">
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500">
-          👋 About Me — Paxto
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text">
+          👋  <span className="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500">About Me — Paxto</span>
         </h1>
 
         {/* Introduction */}
