@@ -1,12 +1,13 @@
 // app/layout.jsx
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Bubblegum_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({
+// Replacing Poppins with Bubblegum Sans
+const bubblegum = Bubblegum_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "400",
 });
 
 export const metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#2d89ef" />
         <meta name="theme-color" content="#0f172a" />
 
+        {/* Favicons */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -43,8 +45,9 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       </head>
+
       <body
-        className={`${poppins.className} antialiased min-h-screen text-white bg-gradient-to-b from-gray-950 via-gray-900 to-black`}
+        className={`${bubblegum.className} antialiased min-h-screen text-white bg-gradient-to-b from-gray-950 via-gray-900 to-black`}
       >
         <div className="min-h-screen flex flex-col justify-between">
           <Header />
